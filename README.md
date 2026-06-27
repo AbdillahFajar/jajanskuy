@@ -175,7 +175,7 @@ Berikut adalah tampilan antarmuka pengguna (UI) dari aplikasi **Jajan Skuy** unt
 ### 🛒 Keranjang & Status Transaksi
 
 | Cart Page | Checkout Page | Order Page |
-| :---: | :---: |
+| :---: | :---: | :---: |
 | <img src="screenshots/cart_page.jpeg" width="240" alt="Keranjang Belanja"> | <img src="screenshots/checkout_page.jpeg" width="240" alt="Halaman Checkout">  |<img src="screenshots/order_page.jpeg" width="240" alt="Order Status / Nota"> |
 
 ---

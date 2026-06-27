@@ -17,7 +17,7 @@ Aplikasi ini bertindak sebagai perantara digital (*frontend marketplace*) yang m
 
 ---
 
-## 🏗️ Arsitektur Aplikasi
+## 🏗️ Arsitektur Aplikasi (frontend)
 
 Proyek frontend Jajan Skuy mengimplementasikan pola **Feature-First Clean Architecture** yang dikombinasikan dengan state management **Provider**. Pola ini membagi kode berdasarkan fitur fungsional utama (*auth, cart, dashboard, order*) untuk mempermudah skalabilitas tim.
 
@@ -47,6 +47,33 @@ lib/
         ├── data/       # Logika pengambilan riwayat transaksi
         ├── domain/     # Logika bisnis pemrosesan nota belanja
         └── presentation/ # Layanan layar status pesanan & rincian nota
+```
+---
+
+## 🏗️ Arsitektur Aplikasi (Backend)
+
+Proyek backend Jajan Skuy ini mengimplementasikan pola arsitektur **Layered Architecture** berbasis framework Gin yang terstruktur. Pola ini memisahkan secara tegas antara lapisan penerima permintaan (*HTTP Handlers*), lapisan logika bisnis (*Services*), dan lapisan akses data murni (*Repositories*) untuk mempermudah pemeliharaan kode.
+
+```text
+.
+├── config/         # Konfigurasi aplikasi (koneksi database, env load, dll)
+├── handlers/       # Lapisan Controller / HTTP handler untuk menerima request & mengirim response
+├── logs/           # Folder penyimpanan file log aktivitas server
+├── middleware/     # Fungsi penengah (seperti autentikasi JWT, CORS, logging http)
+├── models/         # Struktur data (struct) objek bisnis dan skema database (ORM)
+├── pkg/            # Paket pustaka kustom pihak ketiga yang bersifat reusable
+│   └── logger/     # Modul kustom pencatatan log sistem
+├── repositories/   # Lapisan akses data murni untuk interaksi langsung ke database (Query SQL)
+├── routes/         # Manajemen definisi endpoint API (Routing Gin)
+├── seed/           # Skrip atau data awal untuk mengisi database kosong secara otomatis
+├── services/       # Lapisan logika bisnis inti aplikasi (Business Logic Layer)
+├── uploads/        # Folder penyimpanan aset berkas statis atau gambar yang diunggah
+├── .env            # File konfigurasi variabel lingkungan lokal (rahasia)
+├── .gitignore      # Daftar file/folder yang diabaikan agar tidak masuk ke Git
+├── ecommerceapp.json # File konfigurasi akun layanan Firebase (Firebase Service Account)
+├── go.mod          # Manajer dependensi modul Go
+├── go.sum          # Catatan checksum penguncian versi dependensi Go
+└── main.go         # Titik masuk utama (Entry Point) untuk menjalankan server backend
 ```
 
 ---

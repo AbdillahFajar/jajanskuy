@@ -21,8 +21,8 @@ class OrderSuccessPage extends StatelessWidget {
 
   String _paymentMethodLabel(String method) {
     switch (method) {
-      case 'gopay':
-        return 'GoPay';
+      case 'global_institute_pay':
+        return 'Global Institute Pay';
       case 'bank_transfer':
         return 'Transfer Bank';
       case 'virtual_account':

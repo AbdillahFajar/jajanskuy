@@ -158,6 +158,24 @@ Berdasarkan target spesifikasi SDK Flutter (`^3.12.2`), berikut adalah standar p
 
 ## 📸 Screenshot Aplikasi
 
-*(Bagian ini akan diperbarui setelah proses pengembangan UI selesai dilakukan)*
+Berikut adalah tampilan antarmuka pengguna (UI) dari aplikasi **Jajan Skuy** untuk alur utama pemesanan makanan:
+
+### 🔐 Autentikasi & Profil
+
+| Login Page | Account Page |
+| :---: | :---: |
+| <img src="screenshots/login_page.png" width="240" alt="Login Screen"> | <img src="screenshots/account_page.png" width="240" alt="User Account Profile"> |
+
+### 🍔 Eksplorasi Menu & Pemesanan
+
+| Dashboard | Product Detail Page |
+| :---: | :---: |
+| <img src="screenshots/dashboard.png" width="240" alt="Main Dashboard Menu"> | <img src="screenshots/product_detail_page.png" width="240" alt="Product Detail"> |
+
+### 🛒 Keranjang & Status Transaksi
+
+| Cart Page | Order Page |
+| :---: | :---: |
+| <img src="screenshots/cart_page.png" width="240" alt="Keranjang Belanja"> | <img src="screenshots/order_page.png" width="240" alt="Order Status / Nota"> |
 
 ---

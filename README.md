@@ -116,6 +116,7 @@ ipconfig
 #    dan perbarui `baseUrl` sesuai dengan IP Address Wi-Fi di atas.
 
 # 5. Hubungkan HP menggunakan kabel data (Aktifkan Developer Mode & USB Debugging)
+
 # 6. Jalankan perintah ADB port forwarding untuk menjamin konektivitas lokal
 adb reverse tcp:8082 tcp:8082
 adb devices

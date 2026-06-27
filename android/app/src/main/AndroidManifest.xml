@@ -1,0 +1,54 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/> <!--Izin agar aplikasi Anda bisa mengirim atau menerima data ke luar dari perangkat HP melalui jaringan internet maupun jaringan lokal (Wi-Fi).-->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/> <!--Izin wajib agar aplikasi Anda diperbolehkan oleh sistem Android untuk mengakses sensor fisik di HP (seperti sensor Sidik Jari / Fingerprint atau Pemindai Wajah / Face ID). Tanpa ini, fitur login biometrik Anda akan langsung diblokir oleh HP-->
+    <application
+        android:label="Jajan Skuy"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!-- Callback deeplink dari Dompet Kampus Global -->    
+            <intent-filter android:autoVerify="false">    
+                <action android:name="android.intent.action.VIEW"/> <!--intent untuk membuka URL/URI-->
+                <category android:name="android.intent.category.DEFAULT"/>    <!--DEFAULT, dapat menjadi target default-->
+                <category android:name="android.intent.category.BROWSABLE"/>    <!--BROWSABLE, dapat dibuka dari browser atau aplikasi lain-->
+                <data android:scheme="jajanskuy" android:host="payment-callback"/>    <!--android:scheme="jajanskuy" — skema URL yang kita daftarkan; android:host="payment-callback" — host yang diterima-->
+            </intent-filter>    
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>    <!--—identifier unik (biasanya bundle ID + label)-->
+            <data android:scheme="dompetkampus"/>   <!--—daftar skema URL yang akan diterima oleh aplikasi ini-->
+        </intent>
+    </queries>
+</manifest>

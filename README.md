@@ -164,18 +164,18 @@ Berikut adalah tampilan antarmuka pengguna (UI) dari aplikasi **Jajan Skuy** unt
 
 | Login Page | Account Page |
 | :---: | :---: |
-| <img src="screenshots/login_page.png" width="240" alt="Login Screen"> | <img src="screenshots/account_page.png" width="240" alt="User Account Profile"> |
+| <img src="screenshots/login_page.jpeg" width="240" alt="Login Screen"> | <img src="screenshots/account_page.jpeg" width="240" alt="User Account Profile"> |
 
 ### 🍔 Eksplorasi Menu & Pemesanan
 
 | Dashboard | Product Detail Page |
 | :---: | :---: |
-| <img src="screenshots/dashboard.png" width="240" alt="Main Dashboard Menu"> | <img src="screenshots/product_detail_page.png" width="240" alt="Product Detail"> |
+| <img src="screenshots/dashboard.jpeg" width="240" alt="Main Dashboard Menu"> | <img src="screenshots/product_detail_page.jpeg" width="240" alt="Product Detail"> |
 
 ### 🛒 Keranjang & Status Transaksi
 
-| Cart Page | Order Page |
+| Cart Page | Checkout Page | Order Page |
 | :---: | :---: |
-| <img src="screenshots/cart_page.png" width="240" alt="Keranjang Belanja"> | <img src="screenshots/order_page.png" width="240" alt="Order Status / Nota"> |
+| <img src="screenshots/cart_page.jpeg" width="240" alt="Keranjang Belanja"> | <img src="screenshots/checkout_page.jpeg" width="240" alt="Halaman Checkout">  |<img src="screenshots/order_page.jpeg" width="240" alt="Order Status / Nota"> |
 
 ---
